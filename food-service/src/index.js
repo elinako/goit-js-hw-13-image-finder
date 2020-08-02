@@ -8,19 +8,19 @@ const Theme = {
 };
 
 const body = document.getElementById('body');
-const switcher = document.getElementById('theme-switch-control');
-const checkbox = document.getElementById('theme-switch-control');
+const switcher = document.querySelector('.js-switch-input');
 const itemList = document.querySelector('.js-menu');
 
 switcher.addEventListener('change', themeChanger);
 
-body.classList.remove('light-theme', 'dark-theme');
-body.classList.add(`${localStorage.getItem('theme')}`);
+if (localStorage.getItem('theme') !== null) {
+  body.classList.add(`${localStorage.getItem('theme')}`);
+}
 
 const checker = () => {
   body.classList.contains('dark-theme')
-    ? (checkbox.checked = true)
-    : (checkbox.checked = false);
+    ? (switcher.checked = true)
+    : (switcher.checked = false);
 };
 
 checker();
