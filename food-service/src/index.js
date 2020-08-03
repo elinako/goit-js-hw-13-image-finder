@@ -13,17 +13,16 @@ const itemList = document.querySelector('.js-menu');
 
 switcher.addEventListener('change', themeChanger);
 
-if (localStorage.getItem('theme') !== null) {
-  body.classList.add(`${localStorage.getItem('theme')}`);
-}
-
 const checker = () => {
   body.classList.contains('dark-theme')
     ? (switcher.checked = true)
     : (switcher.checked = false);
 };
 
-checker();
+if (localStorage.getItem('theme') === 'dark-theme') {
+  body.classList.replace('light-theme', 'dark-theme');
+  checker();
+}
 
 function themeChanger() {
   body.classList.toggle('light-theme');
