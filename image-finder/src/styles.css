@@ -1,0 +1,70 @@
+#input {
+  width: 200px;
+  height: 44px;
+}
+
+.search-form {
+  margin: 30px auto;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+.gallery {
+  margin: 0 auto;
+  width: 1800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  width: 350px;
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+.photo-card {
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.stats {
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.material-icon {
+  font-size: 10px;
+}
+
+.button,
+.search-button {
+  width: 150px;
+  height: 50px;
+  color: darkcyan;
+  background-color: #fff;
+  border: 1px solid grey;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+}
