@@ -11,6 +11,8 @@ let page = 1;
 
 function imageSearcher(event) {
   event.preventDefault();
+  page = 1;
+  imagesList.innerHTML = '';
   const searchParametr = event.currentTarget.elements.input.value;
   fetch(
     baseUrl +
